@@ -1,0 +1,8 @@
+# Resoconto del lavoro con l'AI
+
+## Sessione 1 - 18 novembre 2026
+- **Completamento dei JSON (`dati/sedi.json` e `dati/eventi.json`):** chiesto di completare le 3 sedi e i 6 eventi partendo dai record di esempio nello ZIP e dai contenuti del sito. Usati entrambi i file verificando che gli `id` originali (`1` e `4`) e i collegamenti tramite `sede_id` restassero invariati.
+- **Scheda dati e diagramma Mermaid (`dati/SCHEMA.md`):** chiesti i 7 punti descrittivi e lo schema `erDiagram`. Scartati dei marcatori di citazione incollati per errore nella prima bozza e chiuso correttamente il blocco `mermaid`, verificando la resa grafica.
+- **Programma generato dai dati (`programma.html`, `programma.js`, `style.css`):** chiesta la generazione delle schede tramite `fetch` con gestione dei quattro stati (caricamento, successo, elenco vuoto, errore) e fallback «Sede da definire». Aggiornata anche la media query mobile in `style.css` per mantenere l'header compatto su schermo stretto.
+- **Meteo a Torino adesso (`info.html` e `meteo.js`):** chiesta l'integrazione dell'API pubblica Open-Meteo coerente con la grafica del sito, mostrando temperatura, vento, orario di rilevazione e link alla licenza CC BY 4.0.
+- **Verifiche e problemi risolti:** testati tutti gli stati con Live Preview e DevTools (`Network` con stato `200`, `[]`, file rinominato, `temperatura_2m` al posto di `temperature_2m`). Durante il test sulla sede inesistente avevo modificato per errore `"id": 99` invece di `"sede_id": 99`: individuato il campo corretto in `dati/eventi.json`, verificata la comparsa di «Sede da definire» e ripristinato il valore originale.

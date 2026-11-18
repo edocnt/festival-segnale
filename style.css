@@ -1,6 +1,5 @@
 :root {
   --colore-primario: #14366b;
-  --colore-primario-scuro: #0c2246;
   --colore-sfondo: #dce6f2;
   --colore-testo: #0f1c2e;
   --colore-accento: #c4452b;
@@ -85,7 +84,6 @@ nav {
   margin-top: 0;
 }
 
-/* Menu in riga da 600px in su */
 nav ul {
   list-style: none;
   padding-left: 0;
@@ -208,7 +206,6 @@ h3 {
 
 /* Schede squadrate con bordo netto blu notte */
 .event-card {
-  margin-bottom: 1rem;
   overflow: hidden;
   border: 2px solid var(--colore-testo);
   border-radius: 0;
@@ -269,7 +266,7 @@ h3 {
   }
 }
 
-/* Configurazione di base per il carosello Swiper */
+/* Carosello Swiper */
 .swiper {
   width: 100%;
   max-width: 100%;
@@ -289,7 +286,7 @@ h3 {
   font-size: 0.95rem;
 }
 
-/* Adattamento responsive della mappa uMap */
+/* Mappa uMap */
 #mappa-sedi {
   width: 100%;
   height: 420px;
@@ -326,36 +323,73 @@ h3 {
   color: #ffffff;
 }
 
-/* Media query per dispositivi mobili inferiori a 600px */
+/* Header compatto su schermi stretti per non coprire la lettura */
 @media (max-width: 599px) {
   .site-header {
-    padding: 0.65rem 0;
-  }
-
-  .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.45rem;
+    padding: 0.75rem 0;
   }
 
   .brand {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .brand span {
-    margin-top: 0.1rem;
-    font-size: 0.8rem;
+    display: none;
   }
 
-  nav,
   nav ul {
-    width: 100%;
-    flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.9rem;
+    font-size: 0.95rem;
   }
+}
 
-  nav a {
-    display: block;
-    padding: 0.2rem 0;
-  }
+/* Messaggio di stato per caricamento, elenco vuoto ed errore in programma.html */
+.program-status {
+  padding: 1.25rem;
+  border: 2px solid var(--colore-testo);
+  background: #ffffff;
+  max-width: 48ch;
+  font-weight: bold;
+}
+
+/* Riquadro Meteo a Torino adesso in info.html */
+.weather-box {
+  max-width: 48rem;
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--colore-testo);
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.weather-box p {
+  margin: 0;
+}
+
+.weather-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+}
+
+.weather-list li strong {
+  display: block;
+  font-family: var(--font-titoli);
+  color: var(--colore-primario);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.weather-error {
+  color: var(--colore-accento);
+  font-weight: bold;
+}
+
+.weather-source {
+  margin-top: 0.65rem;
+  font-size: 0.875rem;
 }

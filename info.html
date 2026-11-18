@@ -91,6 +91,20 @@
         </ul>
       </div>
     </section>
+
+    <!-- Meteo a Torino adesso -->
+    <section class="content-section" aria-labelledby="titolo-meteo">
+      <h2 id="titolo-meteo">Meteo a Torino adesso</h2>
+      <p class="reading-text">Condizioni meteorologiche rilevate oggi a Torino in tempo reale (non rappresentano le previsioni per le date del festival, 12–13 giugno).</p>
+
+      <div id="riquadro-meteo" class="weather-box" aria-live="polite">
+        <p>Caricamento dei dati meteo...</p>
+      </div>
+
+      <p class="weather-source">
+        Dati meteo: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>, licenza <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+      </p>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -114,5 +128,6 @@
       },
     });
   </script>
+  <script src="meteo.js"></script>
 </body>
 </html>
